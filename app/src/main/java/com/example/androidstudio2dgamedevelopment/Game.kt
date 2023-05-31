@@ -41,11 +41,15 @@ class Game(context: Context?) : SurfaceView(context), SurfaceHolder.Callback {
     private val restartButton: Button
     private var difficulty: Int
     private var kills: Int
-    //TODO var mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.sound)
+    var mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.background_music_8bit)
 
     init {
 
-        //TODO mediaPlayer?.start()
+        mediaPlayer?.start()
+
+        mediaPlayer?.setOnCompletionListener {
+            mediaPlayer?.start()
+        }
 
         // Get surface holder and add callback
         val surfaceHolder = holder

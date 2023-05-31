@@ -18,10 +18,11 @@ class SpriteSheet(context: Context) {
 
     val playerSpriteArray: Array<Sprite?>
         get() {
-            val spriteArray = arrayOfNulls<Sprite>(3)
+            val spriteArray = arrayOfNulls<Sprite>(4)
             spriteArray[0] = Sprite(this, Rect(0 * 64, 0, 1 * 64, 64))
             spriteArray[1] = Sprite(this, Rect(1 * 64, 0, 2 * 64, 64))
             spriteArray[2] = Sprite(this, Rect(2 * 64, 0, 3 * 64, 64))
+            spriteArray[3] = Sprite(this, Rect(3 * 64, 0, 4 * 64, 64))
             return spriteArray
         }
     val waterSprite: Sprite
